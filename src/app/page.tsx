@@ -1,101 +1,93 @@
-import Image from "next/image";
+import Hero from "@/components/hero";
+import Header from "../components/Header";
+import Footer from "@/components/Footer";
+import styles from "./index.module.css"
+import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <>
+    <div className={styles.main}>
+      <Header />
+      <Hero />
     </div>
+
+      <section className={styles.about}>
+        <img src="./images/about.png" alt="" />
+        <div>
+          <h1>About Us</h1>
+          <p>
+            At SuperAppDevelopers, we are passionate about creating apps that don’t just meet the 
+            demands of today but also drive the possibilities of tomorrow. With expertise across mobile 
+            and web app development, we focus on delivering innovative, scalable, and user-friendly 
+            solutions that truly make an impact. Our team of experienced developers, designers, and 
+            strategists work closely with each client, understanding their unique needs and transforming 
+            them into powerful digital experiences.Our mission is simple: to turn ideas into seamless, 
+            high-performing applications that fuel growth and foster engagement. Whether you’re an 
+            emerging startup or a well-established business, we approach every project with the same 
+            dedication, precision, and commitment to excellence. We don’t just build apps; we build 
+            partnerships. Let’s connect and create something extraordinary together!
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.service} id="service">
+        <div>
+          <h1>Our Services</h1>
+          <p>
+          At SuperAppDevelopers, we create custom mobile and web apps designed to elevate your business.
+          With expertise in development, UI/UX design, and support, we deliver solutions that make an 
+          impact and drive success
+          </p>
+        </div>
+        <div className={styles.serviceContainer}>
+          <div className={styles.serviceCards}>
+            <img src="./images/android.png" alt="" width={250} height={200}/>
+            <h2>Android App Development</h2>
+            <p>
+              Transform your ideas into powerful Android applications with our expert development team. 
+              We design, build, and optimize apps that enhance user engagement and drive results. 
+              Let us bring your vision to the Android platform with innovative solutions tailored to 
+              your goals.
+            </p>
+            <Link href="/contact" className={styles.btn}>Contact Now</Link>
+          </div>
+          <div className={styles.serviceCards}>
+          <img src="./images/ios.jpg" alt="" width={250} height={200}/>
+          <h2>IOS App Development</h2>
+          <p>
+          Unlock the potential of your ideas with our custom iOS app development services. 
+          We create high-performing, intuitive apps tailored for Apple’s ecosystem, ensuring a seamless 
+          user experience. From concept to deployment, we bring your vision to the App Store with 
+          excellence.
+          </p>
+          <Link href="/contact" className={styles.btn}>Contact Now</Link>
+          </div>
+          <div className={styles.serviceCards}>
+          <img src="./images/flutter.jpg" alt="" width={250} height={200}/>
+          <h2>Flutter App Development</h2>
+          <p>
+          Build dynamic, cross-platform apps with our Flutter development expertise. We create sleek, 
+          high-performance apps that run seamlessly on both iOS and Android. Experience faster 
+          development, beautiful design, and efficient performance with Flutter solutions your needs.
+          </p>
+          <Link href="/contact" className={styles.btn}>Contact Now</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.contact}>
+        <h1>Contact</h1>
+        <label htmlFor="Name">Name</label>
+        <input type="text" placeholder="Enter Your Name"/>
+
+        <label htmlFor="Email">Email</label>
+        <input type="email" placeholder="Enter Your Email"/>
+
+        <Link href="mailto:bhatti3993@gmail.com" className={styles.contactbtn}>Contact Now</Link>
+
+      </section>
+      <Footer />
+    </>
   );
 }

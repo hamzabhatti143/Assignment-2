@@ -1,0 +1,106 @@
+.main{
+    background-image: url(../../public/images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:800px;
+}
+.about{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+
+.about h1{
+    padding: 20px;
+    font-size: 40px;
+    text-shadow: 2px 2px #010f5a;
+    text-align: center;
+}
+.about p{
+    padding: 20px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.service h1{
+    font-size: 50px;
+    text-shadow: 2px 2px #010f5a;
+    text-align: center;
+}
+
+.service p{
+    font-size: 20px;
+    text-align: justify ;
+    text-align: center;
+}
+
+.serviceContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.serviceCards{
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 10%;
+    box-shadow: 2px 2px 2px 2px #010f5a;
+    padding: 30px;
+}
+.serviceCards h2{
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: center;
+}
+.serviceCards img{
+    margin-left: 30px;
+}
+.serviceCards p{
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.serviceCards .btn{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    margin-left: 80px;
+}
+.serviceCards .btn:hover{
+    background-color: #0d30f6;
+    color: #fff;
+}
+.contact{
+    margin-bottom: 40px;
+}
+
+.contact h1{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px #010f5a;
+}
+
+.contact label{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.contact input{
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    margin-left: 430px;
+}
+.contact .contactbtn{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    margin-left: 570px;
+}
+.contact .contactbtn:hover{
+    background-color: #0d30f6;
+    color: #fff;
+}

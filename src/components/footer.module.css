@@ -1,0 +1,22 @@
+.footer{
+    width: 100%;
+    display: flex;
+    margin-bottom: 0;
+}
+.footer img{
+    width: 20%;
+}
+.footIcons{
+    width: 80%;
+    margin-top: 50px;
+}
+.footIcons ul{
+    width: 80%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.links{
+    text-decoration: none;
+    color: black;
+}
